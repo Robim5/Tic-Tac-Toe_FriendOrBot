@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*variables to keep things like color*/
+:root{
+    --darkred: #380f17;
+    --midred: #8f0b13;
+    --lightred: #dc2011;
+    --lightsalmon: #efdfc5;
+    --darkgreen: #252b2b;
+    --gray: #4c4f54;
+}
+
+body {
+    color: var(--lightred);
+    font-family: 'Finger Paint', cursive;
+    background-color: var(--darkred);
+}
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+    text-decoration: 3px solid var(--lightred) overline;
+}
+
+.container{
+    height: 100vh;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lightred);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
+
+/*take the border*/
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+
+#restartbtn {
+    background-color: var(--lightred);
+    color: var(--lightsalmon);
+    border: 3px solid var(--midred);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#restartbtn:hover {
+    background-color: var(--midred);
+    color: var(--darkgreen);
+}
+
+#restartbtn:active {
+    background-color: var(--darkred);
+    color: var(--gray);
+}

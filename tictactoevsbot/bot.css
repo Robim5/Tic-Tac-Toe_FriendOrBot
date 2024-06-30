@@ -1,0 +1,153 @@
+:root{
+    --darkred: #380f17;
+    --midred: #8f0b13;
+    --lightred: #dc2011;
+    --lightsalmon: #efdfc5;
+    --darkgreen: #252b2b;
+    --gray: #4c4f54;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray);
+    font-family: 'Finger Paint', cursive;
+}
+
+.container {
+    height: 100vh;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+    text-decoration: 3px solid var(--darkred) overline;
+    color: var(--darkred); 
+    margin-bottom: 5px;
+}
+
+h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: 3px solid var(--darkred) overline;
+    color: var(--darkred);
+}
+
+h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 3px solid var(--darkred);
+    color: var(--darkgreen);
+    margin-top: 70px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.circle {
+    background-color: var(--darkred);
+    color: var(--lightsalmon);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 10px 100px;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s, border-radius 0.5s;
+}
+
+.circle:hover {
+    background-color: var(--midred);
+    color: var(--lightsalmon);
+    transform: scale(1.15);
+    box-shadow: 0 0 15px var(--lightsalmon);
+    border-radius: 30px;
+}
+
+.cross {
+    background-color: var(--darkred);
+    color: var(--lightsalmon);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 10px 100px;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s, border-radius 0.5s;
+}
+
+.cross:hover {
+    background-color: var(--midred);
+    color: var(--lightsalmon);
+    transform: scale(1.15);
+    box-shadow: 0 0 15px var(--lightsalmon);
+    border-radius: 30px;
+}
+
+.reset {
+    background-color: var(--lightred);
+    color: var(--lightsalmon);
+    border: 3px solid var(--midred);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reset:hover {
+    background-color: var(--midred);
+    color: var(--darkgreen);
+}
+
+.reset:active {
+    background-color: var(--darkred);
+    color: var(--gray);
+}
+
+#gameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--darkred);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
+
+/*take the border*/
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}

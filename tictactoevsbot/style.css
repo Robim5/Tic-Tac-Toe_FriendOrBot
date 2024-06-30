@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*colors i'll use*/
+:root{
+    --darkred: #380f17;
+    --midred: #8f0b13;
+    --lightred: #dc2011;
+    --lightsalmon: #efdfc5;
+    --darkgreen: #252b2b;
+    --gray: #4c4f54;
+}
+
+body {
+    background-color: var(--gray);
+    color: var(--lightsalmon);
+    font-family: 'Finger Paint', cursive;
+    
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+#choose {
+    font-size: 40px;
+    margin: 30px 0;
+    text-decoration: 5px solid var(--darkred) underline;
+}
+
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.bot {
+    background-color: var(--darkred);
+    color: var(--lightsalmon);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 10px 100px;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s, border-radius 0.5s;
+}
+
+.bot:hover {
+    background-color: var(--midred);
+    color: var(--lightsalmon);
+    transform: scale(1.15);
+    box-shadow: 0 0 15px var(--lightsalmon);
+    border-radius: 30px;
+}
+
+
+.friend {
+    background-color: var(--darkred);
+    color: var(--lightsalmon);
+    padding: 13px 26px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 10px 100px;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s, border-radius 0.5s;
+}
+
+.friend:hover {
+    background-color: var(--midred);
+    color: var(--lightsalmon);
+    transform: scale(1.15);
+    box-shadow: 0 0 15px var(--lightsalmon);
+    border-radius: 30px;
+}
+
+#question {
+    font-size: 130px;
+    margin-top: 50px;
+    color: var(--midred);
+    text-shadow: 10px 10px 10px var(--darkgreen);
+    animation: questionAnimation 4s alternate-reverse infinite linear;
+}
+
+#question:hover {
+    animation: questionAnimationFast .5s alternate-reverse infinite linear;
+    font-size: 200px;
+    transition: transform 1s;
+    cursor: pointer;
+    margin-top: -50px;
+}
+
+@keyframes questionAnimation {
+  0% {
+    transform: rotate(70deg);
+  }
+  50% {
+    transform: rotate(-70deg);
+  }
+  100% {
+    transform: rotate(70deg);
+  }
+}
+
+  
+  @keyframes questionAnimationFast {
+    0% {
+      transform: rotate(70deg);
+      color: var(--darkgreen);
+    }
+    10% {
+      transform: rotate(55deg);
+      color: var(--darkred);
+    }
+    20% {
+      transform: rotate(45deg);
+      color: var(--gray);
+    }
+    30% {
+      transform: rotate(30deg);
+      color: var(--lightred);
+    }
+    40% {
+      transform: rotate(15deg);
+      color: var(--lightsalmon);
+    }
+    50% {
+      transform: rotate(0deg);
+      color: var(--midred);
+    }
+    60% {
+      transform: rotate(-15deg);
+      color: var(--darkgreen);
+    }
+    70% {
+      transform: rotate(-30deg);
+      color: var(--darkred);
+    }
+    80% {
+      transform: rotate(-45deg);
+      color: var(--gray);
+    }
+    90% {
+      transform: rotate(-55deg);
+      color: var(--lightred);
+    }
+    100% {
+      transform: rotate(-70deg);
+      color: var(--lightsalmon);
+    }
+  }
